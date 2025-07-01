@@ -1,5 +1,4 @@
-import { PayloadSchema } from ".";
-import { TypeMapping } from "./types";
+import { TypeMapping, PayloadSchema } from "./types";
 
 type ParsedPayload<T extends Record<string, keyof TypeMapping>> = {
   [K in keyof T]: TypeMapping[T[K]];
