@@ -1,7 +1,7 @@
 import { PayloadHandler, PayloadSchema } from "./index";
 
 describe("PayloadHelper", () => {
-  const Schema: PayloadSchema = {
+  const Schema = {
     KEY_1: {
       key: "key1",
       payload: {
@@ -11,7 +11,7 @@ describe("PayloadHelper", () => {
         payloadNullNum: "number | null",
       },
     },
-  } as const;
+  } as const satisfies PayloadSchema;
 
   let payloadHelper: PayloadHandler<typeof Schema>;
 
@@ -29,13 +29,7 @@ describe("PayloadHelper", () => {
 
   describe("stringify", () => {
     it("should serialize payload correctly with different data types", () => {
-      // const result = payloadHelper.stringify(Schema.KEY_1, payloadJson);
-      const result = payloadHelper.stringify(Schema.KEY_1, {
-        payloadNum: 1,
-        payloadStr: "str",
-        // payloadBool: true,
-        // payloadNullNum: null,
-      });
+      const result = payloadHelper.stringify(Schema.KEY_1, payloadJson);
 
       expect(result).toBe(payloadStr);
     });
