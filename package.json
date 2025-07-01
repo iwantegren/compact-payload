@@ -1,15 +1,40 @@
 {
-  "name": "compact-payload",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "jest"
+   "name": "@iwantegren/compact-payload",
+     "version": "1.0.1",
+     "description": "",
+     "main": "dist/index.js",
+     "types": "dist/index.d.ts",
+    "files": [
+      "dist"
+    ],
+    "publishConfig": {
+      "access": "public"
+    },
+     "type": "module",
+     "scripts": {
+      "build": "tsc",
+       "test": "jest"
+     },
+     "keywords": [
+       "compact",
+       "type-safe",
+       "stringify",
+       "parse",
+       "serialization",
+       "deserialization",
+       "payload",
+       "parser",
+       "encoder",
+       "decoder",
+       "utility",
+       "helper"
+     ],
+     "author": "Ivan Bilan <iwantegren@gmail.com>",
+     "license": "MIT",
+     "repository": {
+       "type": "git",
+       "url": "git+https://github.com/iwantegren/compact-payload.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "packageManager": "pnpm@10.8.1",
   "devDependencies": {
     "@types/jest": "^30.0.0",
