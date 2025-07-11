@@ -1,2 +1,2 @@
-export { PayloadHandler } from "./handler.js";
-export type { PayloadSchema, PayloadItem } from "./types.js";
+export { PayloadHandler } from "./handler";
+export type { PayloadSchema, PayloadItem } from "./types";
